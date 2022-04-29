@@ -1,0 +1,147 @@
+
+header{
+    place-items: center;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    width: 260px;
+    background-color: rgb(65, 63, 63);
+    text-decoration: none;
+}
+
+
+
+button{
+    background-color: rgb(65, 59, 59);
+}
+
+main{
+    margin-left: 300px;
+}
+
+
+nav{
+    max-width: 300px;
+    width: 100% ;
+    background-color: rgb(243, 147, 147);
+}
+nav ul{
+    list-style-type: none;
+    padding: 0; 
+}
+nav ul li a:hover{
+    background-color: rgb(185, 17, 17);
+}
+nav ul li a{
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+
+    background-color: rgb(65, 63, 63);
+}
+
+a:link{
+    color: rgb(148, 169, 187);
+}
+a:visited{
+    color: aliceblue;
+}
+a:hover{
+    color: aliceblue;
+}
+a:active{
+    color: aliceblue;
+}
+
+#fogo
+div{
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(65, 63, 63);
+    padding: 30px;
+    margin: 40px;
+    margin-top: 10px;
+}
+
+#agua
+div{
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(65, 63, 63);
+    padding: 30px;
+    margin: 40px;
+    margin-top: 10px;
+}
+
+#grama
+div{
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(65, 63, 63);
+    padding: 30px;
+    margin: 40px;
+    margin-top: 10px;
+}
+
+#form
+div{
+    display: inline-block;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(65, 63, 63);
+    padding: 30px;
+    margin: 40px;
+    margin-top: 10px;
+    margin-left: 600px;
+}
+input{
+    padding: 4px;
+    width: 350px;
+    display: block;
+}
+textarea{
+    width: 354px;
+    display: block;
+}
+
+
+#textao
+h1{
+    margin-left: 650px;
+}
+
+#caze
+div{
+    margin-left: 530px;
+}
+table {
+  text-align: center;
+  font-family: Montserrat, Arial, sans-serif;
+  background:#fafafa ;
+  margin: 0 auto;
+  width: 80%;
+}
+
+tr:nth-child(even) {
+  background:lightgray;
+}
+
+.efeito-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    }
+    .efeito-grow:hover, .efeito-grow:focus, .efeito-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    }
