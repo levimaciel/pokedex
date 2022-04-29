@@ -10,10 +10,18 @@
 <body>
     <header>
         <img src="https://freepikpsd.com/file/2019/10/pokemon-pokebola-png-4-Transparent-Images.png" alt="Logo Pokéball" width=150 height=150> 
-        <h1><a href="./index.html">PokémonDex</a></h1>
+        <h1><a href="./index.html" id="titulo">PokémonDex</a></h1>
         <nav> 
             <ul>
                 <li><a href="./form.html">Cadastre seu pokémon</a></li>
+                    <li> 
+                        <a href="">Conheça os iniciais</a>
+                        <ul>
+                            <li><a href="./charm.html">Charmander</a></li>
+                            <li><a href="./bulb.html">Bulbassauro</a></li>
+                            <li><a href="./squirtle.html">Squirtle</a></li>
+                        </ul>
+                    </li> 
             </ul>
         </nav>
     </header>
@@ -22,25 +30,25 @@
                 <h1>Cadastre seu pokémon</h1>
             </div>
             <section id="caze">
-                <div>
-                    <img src="https://uploads.metropoles.com/wp-content/uploads/2022/03/03184014/FBn4_oMWQAE1XaI-600x400.jpg" alt="Logo Pokéball">
-                </div>
+
             </section>
             <Section id="form">
             <div>
                 <form>
-                    Nome do pokémon:
+                    <label>Nome do pokémon</label>
                     <input type="text" name="name">
                     <br>
-                    Número da pokedéx do pokémon:
+                    <label for="">Número da pokedéx do pokémon</label>
                     <input type="text" name="name">
                     <br>
-                    Região:
+                    <label for="">Região</label>
                     <input type="text" name="name">
                     <br>
-                      Tipo: <textarea name="comentarios"></textarea>
+                      <label for="">Tipo do pokémon</label>
+                      <textarea name="comentarios"></textarea>
+                      <br>
+                      <input type="submit">
                     <br>
-                    <button><a href="./charm.html">enviar</a></button>
                 </form>
             </div>
         </Section>
@@ -92,7 +100,6 @@
 
 
     </main>
-    <footer>Desenvolvido por Levi Maciel</footer>    
-    
+<footer>Desenvolvido por Levi Maciel</footer>       
 </body>
 </html>
