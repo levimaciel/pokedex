@@ -1,76 +1,76 @@
-<script>
-    // Listas
-    let Medicos = [];
-    // Funções
-    function cadastrar_medicos(lista_medicos) {
-        let nome = prompt('Nome:');
-        let especialidade = prompt('Tipo:');
-        let email = prompt('Número da Pokédex:');
-        let medicos = {
-            nome: nome,
-            especialidade: especialidade,
-            email: email
-        }
-        lista_medicos.push(medicos)
-    }
-    function listar_medicos(lista_medicos) {
-        let mensagem = '';
-        let id = 0;
-        for (let medicos of lista_medicos) {
-            mensagem += id + ' ' + ':' + ' ' + medicos.nome + ' - ' + medicos.especialidade + ' - ' + medicos.email + '\n';
-            id++;
-        }
-        alert(mensagem)
-    }
-    function editar_medicos(lista_medicos) {
-        listar_medicos(lista_medicos)
-        let id = parseInt(prompt('Qual id deseja editar?'))
-        let variavel = lista_medicos[id];
-        let nome= prompt(`Medicos: [${variavel.nome}]`); 
-        if (nome== '') {
-            nome= variavel.nome;   
-        }
-        let especialidade= prompt(`especialidade: [${variavel.especialidade}]`); 
-        if (especialidade== '') {
-            especialidade= variavel.especialidade;
-        }
-        let email= prompt(`email: [${variavel.email}]`); 
-        if (email== '') {
-            email= variavel.email;
-        }
-        let medicoNovo= {
-            nome: nome,
-            especialidade:especialidade,
-            email: email
-        };
-        lista_medicos[id] = medicoNovo;
-    }
-    function apagar_medicos(lista_medicos) {
-        listar_medicos(lista_medicos);
-        let id = parseInt(prompt('Qual ID deseja apagar?'))
-        lista_medicos.splice(id, 1)
-    }
-    // Programa Principal
-    loop:
-    while (true) {
-        alert('1 Cadastrar pokémon\n2 Listar pokémon\n3 Editar pokémon\n4 Apagar pokémon \n5 SAIR');
-        opcao = prompt('');
-        switch (opcao) {
-            case '1':
-                cadastrar_medicos(Medicos)
-                break
-            case '2':
-                listar_medicos(Medicos)
-                break
-            case '3':
-                editar_medicos(Medicos)
-                break
-            case '4':
-                apagar_medicos(Medicos)
-                break
-            case '5':
-                alert('SAIR')
-                break loop;
-        }
-    }
-</script>
+<script> 
+     // Listas 
+     let Pokemon = []; 
+     // Funções 
+     function cadastrar_pokemon(lista_pokemon) { 
+         let nome = prompt('Nome:'); 
+         let tipo = prompt('Tipo:'); 
+         let numero = parseInt(prompt('Número da Pokédex:')); 
+         let pokemons = { 
+             nome: nome, 
+             tipo: tipo, 
+             numero: numero 
+         } 
+         lista_pokemon.push(pokemons) 
+     } 
+     function listar_pokemon(lista_pokemon ) { 
+         let mensagem = ''; 
+         let id = 0; 
+         for (let pokemons of lista_pokemon) { 
+             mensagem += id + ' ' + ':' + ' ' + pokemons.nome + ' - ' + pokemons.tipo + ' - ' + pokemons.numero + '\n'; 
+             id++; 
+         } 
+         alert(mensagem) 
+     } 
+     function editar_pokemon(lista_pokemon) { 
+         listar_pokemon(lista_pokemon) 
+         let id = parseInt(prompt('Qual id deseja editar?')) 
+         let variavel = lista_pokemon[id]; 
+         let nome= prompt(`Novo nome de ${variavel.nome}:`);  
+         if (nome== '') { 
+             nome= variavel.nome;    
+         } 
+         let tipo= prompt(`Novo tipo: `);  
+         if (tipo== '') { 
+             tipo= variavel.tipo; 
+         } 
+         let numero= prompt(`Novo número da pokédex:`);  
+         if (numero== '') { 
+             numero= variavel.numero; 
+         } 
+         let pokemonNovo= { 
+             nome: nome, 
+             tipo:tipo, 
+             numero: numero 
+         }; 
+         lista_pokemon[id] = pokemonNovo; 
+     } 
+     function apagar_pokemon(lista_pokemon) { 
+         listar_pokemon(lista_pokemon); 
+         let id = parseInt(prompt('Qual ID deseja apagar?')) 
+         lista_pokemon.splice(id, 1) 
+     } 
+     // Programa Principal 
+     loop: 
+     while (true) { 
+         alert('1 Cadastrar pokémon\n2 Listar pokémon\n3 Editar pokémon\n4 Apagar pokémon \n5 SAIR'); 
+         opcao = prompt(''); 
+         switch (opcao) { 
+             case '1': 
+                 cadastrar_pokemon(Pokemon) 
+                 break 
+             case '2': 
+                 listar_pokemon(Pokemon) 
+                 break 
+             case '3': 
+                 editar_pokemon(Pokemon) 
+                 break 
+             case '4': 
+                 apagar_pokemon(Pokemon) 
+                 break 
+             case '5': 
+                 alert('SAIR') 
+                 break loop; 
+         } 
+     } 
+ </script>
