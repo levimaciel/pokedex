@@ -1,105 +1,127 @@
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="style.css  ">
+    <title>Cadastre seu pokémon</title>
+    <script type='text/javascript' src="main.js"></script>
+    <style>
+        #listaRegistros{ display: none; }
+        #cadastroRegistro{
+            display: none;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        body[page=lista] #listaRegistros{ display: block; }
+        body[page=cadastro] #cadastroRegistro{ display: flex; }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table th,
+        table td{
+            font-size: 14px;
+            padding: 10px 15px;
+            border: solid 1px #ccc;
+        }
+
+        button{
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: rgb(221, 16, 16);
+            color: #fff;
+            margin: 3px;
+            padding: 10px 15px;
+        }
+        button.cinza{
+            background-color: #ccc;
+            color: rgba(105, 102, 102, 0.842);
+        }
+        button.vermelho{
+            background-color: rgba(105, 102, 102, 0.842);
+        }
+        button:hover{
+            opacity: 0.8;
+        }
+
+        input{
+            border: solid 1px #ccc;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .label>div{
+            display: flex;
+        }
+        .label>div>input{
+            flex: 1;
+        }
+    </style>
+
 </head>
-<body>
-    <header>
-        <img src="https://freepikpsd.com/file/2019/10/pokemon-pokebola-png-4-Transparent-Images.png" alt="Logo Pokéball" width=150 height=150> 
-        <h1><a href="./index.html" id="titulo">PokémonDex</a></h1>
-        <nav> 
-            <ul>
-                <li><a href="./form.html">Cadastre seu pokémon</a></li>
-                    <li> 
-                        <a href="">Conheça os iniciais</a>
-                        <ul>
-                            <li><a href="./charm.html">Charmander</a></li>
-                            <li><a href="./bulb.html">Bulbassauro</a></li>
-                            <li><a href="./squirtle.html">Squirtle</a></li>
-                        </ul>
-                    </li> 
-            </ul>
-        </nav>
-    </header>
-    <main>
-            <div id="textao">
-                <h1>Cadastre seu pokémon</h1>
-            </div>
-            <section id="caze">
+<body page='lista'>
+    <div id='listaRegistros'>
 
-            </section>
-            <Section id="form">
+        <div style='display: flex;'>
+            <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Tipo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id='listaRegistrosBody'></tbody>
+        </table>
+
+        <div>
+            <button onclick="vizualizar('cadastro', true)">Novo Pokémon</button>
+        </div>
+
+    </div>
+
+    <form id='cadastroRegistro'>
+
+        <div class='label'>
+            <div>ID</div>
             <div>
-                <form>
-                    <label>Nome do pokémon</label>
-                    <input type="text" name="name">
-                    <br>
-                    <label for="">Número da pokedéx do pokémon</label>
-                    <input type="text" name="name">
-                    <br>
-                    <label for="">Região</label>
-                    <input type="text" name="name">
-                    <br>
-                      <label for="">Tipo do pokémon</label>
-                      <textarea name="comentarios"></textarea>
-                      <br>
-                      <input type="submit">
-                    <br>
-                </form>
+                <input type='number' readonly id='id' />
             </div>
-        </Section>
-        <section>
+        </div>
+
+        <div class='label'>
+            <div>Nome</div>
             <div>
-                <table border="2" >
-                    <tr>
-                      <th>Fogo</th>
-                      <td>Doe</td>
-                      <td>Doe</td> 
-                      <td>Doe</td> 
-                      <td>Doe</td> 
-                      <td>Doe</td> 
-                      <td>Doe</td>
-                      <td>Doe</td>
-                      <td>Doe</td>
-                      <td>Doe</td>
-                      <td><a href="">Editar</a>//<a href="">Apagar</a></td> 
-                    </tr>
-                    <tr>
-                      <th>Grama</th>
-                      <td>Doe</td>
-                      <td>Doe</td> 
-                      <td>Doe</td> 
-                      <td>Doe</td> 
-                      <td>Doe</td> 
-                      <td>Doe</td> 
-                      <td>Doe</td>
-                      <td>Doe</td>
-                      <td>Doe</td>
-                      <td><a href="">Editar</a>//<a href=""> Apagar</a></td> 
-                    </tr>
-                    <tr>
-                        <th>Água</th>
-                        <td>Doe</td>
-                        <td>Doe</td> 
-                        <td>Doe</td> 
-                        <td>Doe</td> 
-                        <td>Doe</td> 
-                        <td>Doe</td>
-                        <td>Doe</td>
-                        <td>Doe</td>
-                        <td>Doe</td>
-                        <td><a href="">Editar</a>//<a href=""> Apagar</a></td> 
-                    </tr>
-                  </table>
+                <input id='nome' />
             </div>
-        </section>
+        </div>
 
+        <div class='label'>
+            <div>Tipo</div>
+            <div>
+                <input type='tel' id='tipo' />
+            </div>
+        </div>
 
-    </main>
-<footer>Desenvolvido por Levi Maciel</footer>       
+        <div>
+            <button>Salvar</button>
+            <button onclick="vizualizar('lista')" class="cinza" type='button'>Cancelar</button>
+        </div>
+
+    </form>
+
 </body>
 </html>
