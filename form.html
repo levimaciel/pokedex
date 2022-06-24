@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,14 +6,14 @@
     <title>Cadastre seu pokémon</title>
     <script type='text/javascript' src="main.js"></script>
     <style>
-        #listaRegistros{ display: none; }
+        #listaPokemon{ display: none; }
         #cadastroRegistro{
             display: none;
             flex-direction: column;
             gap: 30px;
         }
 
-        body[page=lista] #listaRegistros{ display: block; }
+        body[page=lista] #listaPokemon{ display: block; }
         body[page=cadastro] #cadastroRegistro{ display: flex; }
 
         body{
@@ -69,7 +68,24 @@
 
 </head>
 <body page='lista'>
-    <div id='listaRegistros'>
+    <header>
+        <img src="https://freepikpsd.com/file/2019/10/pokemon-pokebola-png-4-Transparent-Images.png" alt="Logo Pokéball" width=150 height=150> 
+        <h1><a href="./index.html" id="titulo">PokémonDex</a></h1>
+        <nav> 
+            <ul>
+                <li><a href="./form.html">Cadastre seu pokémon</a></li>
+                    <li> 
+                        <a href="">Conheça os iniciais</a>
+                        <ul>
+                            <li><a href="./charm.html">Charmander</a></li>
+                            <li><a href="./bulb.html">Bulbassauro</a></li>
+                            <li><a href="./squirtle.html">Squirtle</a></li>
+                        </ul>
+                    </li> 
+            </ul>
+        </nav>
+    </header>
+    <div id='listaPokemon'>
 
         <div style='display: flex;'>
             <input style='flex:1' placeholder="PESQUISAR" autofocus id='inputPesquisa' />
@@ -84,7 +100,7 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody id='listaRegistrosBody'></tbody>
+            <tbody id='listaPokemonBody'></tbody>
         </table>
 
         <div>
